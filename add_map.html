@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="vi">
+<link rel="stylesheet" href="css/leaflet.css">
+<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="css/Leaflet.PolylineMeasure.css">
+
+<script src="libs/leaflet.js"></script>
+<script src="libs/jquery.min.js"></script>
+<script src="libs/bootstrap.min.js"></script>
+<script src="libs/Leaflet.PolylineMeasure.js"></script>
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Tìm kiếm nhà phân phối</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/styles1.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <div class="navbar-brand container">
+                <div class="row" id="logo_slogan">
+                    <div class="col-3 col-sm-3">
+                        <a href="#home"><img src="Elements/Asset 29.png" alt="" width="90px"></a>
+                    </div>
+                    <div class="col-9 col-sm-9" id="sologan">
+                        <a>CÔNG TY CỔ PHẦN <br> NHỰA THIẾU NIÊN TIỀN PHONG PHÍA NAM</a>
+                    </div>
+                </div>
+            </div>
+            <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#home">TRANG
+                            CHỦ</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">VỀ
+                            CHÚNG TÔI</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">LIÊN
+                            HỆ</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#info">ĐĂNG KÝ
+                            NHẬN THÔNG TIN KHUYẾN MÃI</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- home Section-->
+    <section class="page-section home" id="home">
+        <div class="container-fluid">
+            <!-- home Section Heading-->
+
+            <div class="container-fluid" id="main-caption">
+                <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                    <div class="col-md-12 p-5 mt-lg-5 text-white" id="main-caption-text">
+                        <h1 class="animated fadeIn">HỆ THỐNG CỬA HÀNG TẠI PHÍA NAM</h1>
+                        <p class="animated fadeIn">Tra cứu cửa hàng gần nhất tại khu vực của
+                            quý khách</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Search Start -->
+            <div class="container wow fadeIn rounded-5" data-wow-delay="0.1s" id="search">
+
+                <div class="container">
+                    <form id="search-form" name="gs" method="submit" role="search" action="#">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="mb-2" for="">Tỉnh/Thành Phố</label>
+                                        <select class="form-select border-0 py-3 rounded-3">
+                                            <option selected>Tỉnh/Thành Phố</option>
+                                            <option value="1">Property Type 1</option>
+                                            <option value="2">Property Type 2</option>
+                                            <option value="3">Property Type 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="mb-2" for="">Quận/Huyện</label>
+                                        <select class="form-select border-0 py-3 rounded-3">
+                                            <option selected>Quận/Huyện</option>
+                                            <option value="1">Property Type 1</option>
+                                            <option value="2">Property Type 2</option>
+                                            <option value="3">Property Type 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="mb-2" for="">Phường/Xã</label>
+                                        <select class="form-select border-0 py-3 rounded-3">
+                                            <option selected>Phường/Xã</option>
+                                            <option value="1">Location 1</option>
+                                            <option value="2">Location 2</option>
+                                            <option value="3">Location 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button id="button-search" class="btn border-0">
+                                    <span><i class="fas fa-search"></i>Tìm cửa hàng</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Search End -->
+
+        </div>
+    </section>
+
+    <!-- About Section-->
+    <section class="page-section text-white mb-0" id="about">
+        <div class="container" id="about-body">
+
+            <div class="row">
+                <div class="col-lg-3 rounded-5 align-items-center" id="about-left">
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                            </tr>
+                        </thead>
+                        <tbody id="t_points"></tbody>
+                    </table>
+
+                </div>
+
+                <div class="col-lg-9 rounded-5" id="about-right">
+                    <div id="map" width="100%" height="100%">
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                var map = L.map('map').setView([46.76336, -71.32453], 16);
+                var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(map);
+
+                function addRowTable(code, coords) {
+                    var tr = document.createElement("tr");
+                    var td = document.createElement("td");
+                    td.textContent = code;
+                    tr.appendChild(td);
+                    tr.onclick = function () { map.flyTo(coords, 17); };
+                    document.getElementById("t_points").appendChild(tr);
+                }
+                var buffers = [];
+                function addMarker(code, lat, lng) {
+                    var p = L.marker([lat, lng]);
+                    p.title = code;
+                    p.alt = code;
+                    p.bindPopup(code);
+                    p.addTo(map);
+                    addRowTable(code, [lat, lng]);
+                    var c = L.circle([lat, lng], {
+                        color: 'red',
+                        fillColor: '#f03',
+                        fillOpacity: 0.5,
+                        radius: 0
+                    }).addTo(map);
+                    buffers.push(c);
+                }
+
+
+                $(document).ready(function () {
+                    var points = [["M02KM262", 46.76336, -71.32453],
+                    ["M10KM052", 46.76186, -71.32247],
+                    ["83KM081", 46.76489, -71.32664],
+                    ["83KM082", 46.76672, -71.32919]];
+                    for (var i = 0; i < points.length; i++) {
+                        addMarker(points[i][0], points[i][1], points[i][2]);
+                    }
+                });
+
+                L.control.scale({ maxWidth: 240, metric: true, position: 'bottomleft' }).addTo(map);
+
+                L.control.polylineMeasure({ position: 'topleft', imperial: false, clearMeasurementsOnStop: false, showMeasurementsClearControl: true }).addTo(map);
+
+
+                $("#range").change(function (e) {
+                    var radius = parseInt($(this).val())
+                    buffers.forEach(function (e) {
+                        e.setRadius(radius);
+                        e.addTo(map);
+                    });
+                });
+
+            </script>
+        </div>
+    </section>
+
+    <!-- Contact Section-->
+    <section class="page-section" id="contact">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-xl-5 col-xm-12" id="contact-left">
+
+                </div>
+                <div class="col-lg-5 col-xl-5 col-xm-12" id="contact-right">
+                    <div>
+                        <p class="text-center"><img src="Elements/Asset 29.png" alt="" width="60px"></p>
+                        <p class="text-center text-danger">CÔNG TY CỔ PHẦN NHỰA THIẾU NIÊN TIỀN PHONG PHÍA NAM.</p>
+                        <p class="text-left">ĐỊA CHỈ: LÔ 2, KCN ĐỒNG AN 2, P. HÒA PHÚ, TP. THỦ DẦU MỘT, BÌNH DƯƠNG.
+                        </p>
+                        <p class="text-left">info@nhuatienphong.vn.</p>
+                        <p class="text-left">+84. 123 456 789.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Contact Section-->
+    <section class="page-section" id="info">
+
+        <div class="container" id="info-body">
+
+            <div class="row justify-content-between">
+                <div class="col-lg-5 align-item-center rounded-5" id="info-left">
+
+                    <form action="#" class="contact-form">
+                        <h5 class="title">ĐĂNG KÝ NHẬN <br> THÔNG TIN</h5>
+                        <div class="text-center pt-3 pb-1">
+                            <label class="form-label pb-2" for="name">Họ và tên</label>
+                            <input type="text" class="form-control rounded border-white mb-3 form-input" id="name"
+                                required style="background-color: rgb(242, 242, 242);">
+                        </div>
+                        <div class="text-center pb-1">
+                            <label class="form-label pb-2" for="email">Email</label>
+                            <input type="email" class="form-control rounded border-white mb-3 form-input" required
+                                style="background-color: rgb(242, 242, 242);">
+                        </div>
+                        <div class="text-center pb-1">
+                            <label class="form-label pb-2" for="phone">Số điện thoại</label>
+                            <input type="phone" id="phone-number"
+                                class="form-control rounded border-white mb-3 form-input" placeholder=" " required
+                                style="background-color: rgb(242, 242, 242);">
+                        </div>
+
+                        <div class="text-center bg-success rounded-5 p-1  pt-2">
+                            <input class="btn rounded-5" type="submit" value="ĐĂNG KÝ">
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="col-lg-6 rounded-5" id="info-right">
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <div class="container-fluid">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-xl-3" id="info-left">
+
+                    <div class="registration-form align-items-center">
+                        <form>
+                            <div class="">
+                                <p class="text-center fs-1 text">ĐĂNG KÝ NHẬN THÔNG TIN</p>
+                            </div>
+                            <div class="form-group">
+                                <p class="text-center">Họ và tên</p>
+                                <input type="text" class="form-control item" id="username" required>
+                            </div>
+                            <div class="form-group">
+                                <p class="text-center">Email</p>
+                                <input type="text" class="form-control item" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <p class="text-center">Số điện thoại</p>
+                                <input type="text" class="form-control item" id="phone-number" required>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="button" class="btn btn-success create-account">Đăng ký nhận thông
+                                    tin</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="col-lg-5 col-xl-5" id="info-right">
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
+</body>
+
+</html>

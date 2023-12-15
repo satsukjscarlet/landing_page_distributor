@@ -25,11 +25,11 @@
     <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
         <div class="container">
             <div class="navbar-brand container">
-                <div class="row" id ="logo_slogan">
+                <div class="row" id="logo_slogan">
                     <div class="col-3 col-sm-3">
                         <a href="#home"><img src="Elements/Asset 29.png" alt="" width="90px"></a>
                     </div>
-                    <div class="col-9 col-sm-9" id ="sologan">
+                    <div class="col-9 col-sm-9" id="sologan">
                         <a>CÔNG TY CỔ PHẦN <br> NHỰA THIẾU NIÊN TIỀN PHONG PHÍA NAM</a>
                     </div>
                 </div>
@@ -55,98 +55,106 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- home Section-->
     <section class="page-section home" id="home">
-        <div class="container">
+        <div class="container-fluid">
             <!-- home Section Heading-->
-            <!-- home Grid Items-->
-            <div class="content-slider">
-                <div class="slider">
-                    <div id="top-banner-1" class="banner">
-                        <div class="banner-inner-wrapper header-text">
-                            <div class="main-caption">
-                                <h1 style="padding-left: 10%; padding-top: 2%;">HỆ THỐNG CỬA HÀNG TẠI PHÍA NAM</h1>
-                                <h3 style="padding-left: 10%; color: white;">Tra cứu cửa hàng gần nhất tại khu vực của
-                                    quý khách</h3>
-                            </div>
 
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="more-info">
-
-                                            <form id="search-form" name="gs" method="submit" role="search" action="#">
-                                                <div class="row">
-                                                    <div class="col-lg-3">
-                                                        <fieldset>
-                                                            <select name="Location" class="form-select"
-                                                                aria-label="Default select example" id="chooseLocation"
-                                                                onChange="this.form.click()">
-                                                                <option selected>Tỉnh/Thành Phố</option>
-                                                                <option type="checkbox" name="option1" value="Italy">
-                                                                    Italy</option>
-                                                                <option value="France">France</option>
-                                                            </select>
-                                                        </fieldset>
-                                                    </div>
-                                                    <div class="col-lg-3">
-                                                        <fieldset>
-                                                            <select name="Price" class="form-select"
-                                                                aria-label="Default select example" id="choosePrice"
-                                                                onChange="this.form.click()">
-                                                                <option selected>Quận/Huyện</option>
-                                                                <option value="100">$100 - $250</option>
-                                                            </select>
-                                                        </fieldset>
-                                                    </div>
-                                                    <div class="col-lg-3">
-                                                        <fieldset>
-                                                            <select name="Price" class="form-select"
-                                                                aria-label="Default select example" id="choosePrice"
-                                                                onChange="this.form.click()">
-                                                                <option selected>Phường/Xã</option>
-                                                                <option value="100">$100 - $250</option>
-                                                            </select>
-                                                        </fieldset>
-                                                    </div>
-                                                    <div class="col-lg-3">
-                                                        <fieldset>
-                                                            <button class="border-button" ><i class="fas fa-search"></i> Tìm cửa hàng</button>
-                                                        </fieldset>
-                                                    </div>
-                                                </div>
-                                            </form>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+            <div class="container-fluid" id="main-caption">
+                <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                    <div class="col-md-12 p-5 mt-lg-5 text-white" id="main-caption-text">
+                        <h1 class="animated fadeIn">HỆ THỐNG CỬA HÀNG TẠI PHÍA NAM</h1>
+                        <p class="animated fadeIn">Tra cứu cửa hàng gần nhất tại khu vực của
+                            quý khách</p>
                     </div>
                 </div>
             </div>
+            <!-- Search Start -->
+            <div class="container wow fadeIn rounded-5" data-wow-delay="0.1s" id="search">
+
+                <div class="container">
+                    <form id="search-form" name="gs" method="submit" role="search" action="#">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="mb-2" for="">Tỉnh/Thành Phố</label>
+                                        <select class="form-select border-0 py-3 rounded-3">
+                                            <option selected>Tỉnh/Thành Phố</option>
+                                            <option value="1">Property Type 1</option>
+                                            <option value="2">Property Type 2</option>
+                                            <option value="3">Property Type 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="mb-2" for="">Quận/Huyện</label>
+                                        <select class="form-select border-0 py-3 rounded-3">
+                                            <option selected>Quận/Huyện</option>
+                                            <option value="1">Property Type 1</option>
+                                            <option value="2">Property Type 2</option>
+                                            <option value="3">Property Type 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="mb-2" for="">Phường/Xã</label>
+                                        <select class="form-select border-0 py-3 rounded-3">
+                                            <option selected>Phường/Xã</option>
+                                            <option value="1">Location 1</option>
+                                            <option value="2">Location 2</option>
+                                            <option value="3">Location 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button id="button-search" class="btn border-0">
+                                    <span><i class="fas fa-search"></i>Tìm cửa hàng</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Search End -->
+
         </div>
     </section>
 
     <!-- About Section-->
-    <section class="page-section bg-primary text-white mb-0" id="about">
+    <section class="page-section text-white mb-0" id="about">
         <div class="container" id="about-body">
+
             <div class="row">
-                <div class="col-4 ms-auto align-items-center" id="about-left">
-                    <p class="text-center">DANH SÁCH CỬA HÀNG <br> trong phạm vi tìm kiếm</p>
-                    <div class="" id = "list-npp">
-                        <div class = "form-npp">
-                            <p class="text-start text-white">CỬA HÀNG ĐIỆN NƯỚC NTP</p>
-                            <p class="text-start text-red">Số 1A, Ấp Hậu Lân</p>
-                            <p class="text-start">Xã Bà Điểm, Huyện Hóc Môn</p>
-                            <p class="text-start">Thành Phố Hồ Chí Minh.</p>
-                        </div>
+                <div class="col-lg-3 rounded-5 align-items-center" id="about-left">
+                    
+                    <h4 class="text-center pt-4">DANH SÁCH CỬA HÀNG <br> trong phạm vi tìm kiếm</h4>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active">
+                            <h6 class="list-group-item-heading">CỬA HÀNG ĐIỆN NƯỚC NTP</h6>
+                            <p class="list-group-item-text"><br>Số 1A, Ấp Hậu Lân
+                                <br>Xã Bà Điểm, Huyện Hóc Môn
+                                <br>Thành Phố Hồ Chí Minh.
+                            </p>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <h4 class="list-group-item-heading">Second List Group Item Heading</h4>
+                            <p class="list-group-item-text">List Group Item Text</p>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <h4 class="list-group-item-heading">Third List Group Item Heading</h4>
+                            <p class="list-group-item-text">List Group Item Text</p>
+                        </a>
                     </div>
+
                 </div>
-                <div class="col-8 me-auto bg-primary" id="about-right">
-                    <p class="lead">Bản đồ ở đây</p>
+
+                <div class="col-lg-9 rounded-5" id="about-right">
+                    <div id="map" width="100%" height="100%">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Hai+Phong,+Vietnam&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                        <!-- <p class="lead">Bản đồ ở đây</p> -->
+                    </div>
                 </div>
             </div>
 
@@ -157,10 +165,10 @@
     <section class="page-section" id="contact">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-lg-5 col-xl-5" id="contact-left">
+                <div class="col-lg-5 col-xl-5 col-xm-12" id="contact-left">
 
                 </div>
-                <div class="col-lg-5 col-xl-5" id="contact-right">
+                <div class="col-lg-5 col-xl-5 col-xm-12" id="contact-right">
                     <div>
                         <p class="text-center"><img src="Elements/Asset 29.png" alt="" width="60px"></p>
                         <p class="text-center text-danger">CÔNG TY CỔ PHẦN NHỰA THIẾU NIÊN TIỀN PHONG PHÍA NAM.</p>
@@ -177,12 +185,51 @@
 
     <!-- Contact Section-->
     <section class="page-section" id="info">
-        <div class="container-fluid">
-            <!-- Contact Section Form-->
+
+        <div class="container" id="info-body">
+
+            <div class="row justify-content-between">
+                <div class="col-lg-5 align-item-center rounded-5" id="info-left">
+
+                    <form action="#" class="contact-form">
+                        <h5 class="title">ĐĂNG KÝ NHẬN <br> THÔNG TIN</h5>
+                        <div class="text-center pt-3 pb-1">
+                            <label class="form-label pb-2" for="name">Họ và tên</label>
+                            <input type="text" class="form-control rounded border-white mb-3 form-input" id="name"
+                                required style="background-color: rgb(242, 242, 242);">
+                        </div>
+                        <div class="text-center pb-1">
+                            <label class="form-label pb-2" for="email">Email</label>
+                            <input type="email" class="form-control rounded border-white mb-3 form-input" required
+                                style="background-color: rgb(242, 242, 242);">
+                        </div>
+                        <div class="text-center pb-1">
+                            <label class="form-label pb-2" for="phone">Số điện thoại</label>
+                            <input type="phone" id="phone-number"
+                                class="form-control rounded border-white mb-3 form-input" placeholder=" " required
+                                style="background-color: rgb(242, 242, 242);">
+                        </div>
+
+                        <div class="text-center bg-success rounded-5 p-1  pt-2">
+                            <input class="btn rounded-5" type="submit" value="ĐĂNG KÝ">
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="col-lg-6 rounded-5" id="info-right">
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <div class="container-fluid">
+
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-xl-3" id="info-left">
 
-                    <div class="registration-form ">
+                    <div class="registration-form align-items-center">
                         <form>
                             <div class="">
                                 <p class="text-center fs-1 text">ĐĂNG KÝ NHẬN THÔNG TIN</p>
@@ -199,7 +246,7 @@
                                 <p class="text-center">Số điện thoại</p>
                                 <input type="text" class="form-control item" id="phone-number" required>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group text-center">
                                 <button type="button" class="btn btn-success create-account">Đăng ký nhận thông
                                     tin</button>
                             </div>
@@ -213,8 +260,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
+
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -224,7 +272,7 @@
     <!-- * *                               SB Forms JS                               * *-->
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
 </body>
 
 </html>
